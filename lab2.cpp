@@ -77,6 +77,7 @@ int main()
 		}
 
 	}
+	cout << "\nA WorkTicket object has been copied.";
 	std::cout << endl << endl;
 
 	//Now we will show the entered data by the user using a for loop.

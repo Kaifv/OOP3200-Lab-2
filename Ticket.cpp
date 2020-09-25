@@ -14,6 +14,11 @@ WorkTicket::WorkTicket(int ticketNumber, int ticketDay, int ticketMonth, int tic
 	SetWorkTicket(ticketNumber, ticketDay, ticketMonth, ticketYear, std::move(clientID), std::move(issueDescrip));
 }
 
+WorkTicket::WorkTicket(const WorkTicket& ticketobj)
+{
+	SetWorkTicket(ticketobj.GetNumber(), ticketobj.GetDay(), ticketobj.GetMonth(), ticketobj.GetYear(), ticketobj.GetID(), ticketobj.GetDescription());
+}
+
 // Defining SetWorkTicket function with its parameters and if all are valid then return true.
 bool WorkTicket::SetWorkTicket(int ticketNumber, int ticketDay, int ticketMonth, int ticketYear, std::string clientID, std::string issueDescrip)
 {

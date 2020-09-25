@@ -155,3 +155,18 @@ std::string WorkTicket::ShowWorkTicket() const
 	return output.str();
 
 }
+
+std::ostream& operator>>(std::ostream& out, const WorkTicket ticket)
+{
+	out << ticket.ShowWorkTicket();
+	return out;
+}
+
+std::istream& operator<<(std::istream& in, WorkTicket ticket)
+{
+	in >> ticket.myticketDay;
+	in.ignore();
+	in >> ticket.myticketMonth;
+	in.ignore();
+	in >> ticket.myticketYear;
+}

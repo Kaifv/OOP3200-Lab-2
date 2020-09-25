@@ -94,7 +94,7 @@ int main()
 		std::cout << endl;
 	}
 
-	cout << "\n Are both the ticket numbers same?: " << std::to_string(arr[1].GetNumber() == arr[2].GetNumber()) << std::endl;
+	cout << "\n Are both the ticket numbers same?: " << std::to_string(arr[0].GetNumber() == arr[1].GetNumber()) << std::endl;
 	return 0;
 } //end of main function.
 

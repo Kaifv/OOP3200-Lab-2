@@ -16,6 +16,7 @@
 
 using namespace std;
 
+
 // main function
 int main()
 {
@@ -78,6 +79,7 @@ int main()
 
 	}
 	cout << "\nA WorkTicket object has been copied.";
+	
 	std::cout << endl << endl;
 
 	//Now we will show the entered data by the user using a for loop.
@@ -91,6 +93,8 @@ int main()
 
 		std::cout << endl;
 	}
+
+	cout << "\n Are both the ticket numbers same?: " << std::to_string(arr[1].GetNumber() == arr[2].GetNumber()) << std::endl;
 	return 0;
 } //end of main function.
 

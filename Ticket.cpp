@@ -19,6 +19,11 @@ WorkTicket::WorkTicket(const WorkTicket& ticketobj)
 	SetWorkTicket(ticketobj.GetNumber(), ticketobj.GetDay(), ticketobj.GetMonth(), ticketobj.GetYear(), ticketobj.GetID(), ticketobj.GetDescription());
 }
 
+bool WorkTicket::operator==(const WorkTicket& another_number) const
+{
+	return (GetNumber() == another_number.GetNumber());
+}
+
 // Defining SetWorkTicket function with its parameters and if all are valid then return true.
 bool WorkTicket::SetWorkTicket(int ticketNumber, int ticketDay, int ticketMonth, int ticketYear, std::string clientID, std::string issueDescrip)
 {

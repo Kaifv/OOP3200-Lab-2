@@ -95,6 +95,17 @@ int main()
 	}
 
 	cout << "\n Are both the ticket numbers same?: " << std::to_string(arr[0].GetNumber() == arr[1].GetNumber()) << std::endl;
+
+	WorkTicket anotherDate;
+	
+
+	cout << "\n Enter another ticket date: " ;
+	
+	cin >> anotherDate;
+	
+	
+		
+	
 	return 0;
 } //end of main function.
 

@@ -78,6 +78,10 @@ int main()
 		}
 
 	}
+	WorkTicket other_ticket = arr[1].GetNumber();
+	
+	cout << "\n New ticket is " << other_ticket << endl;
+
 	cout << "\nA WorkTicket object has been copied.";
 	
 	std::cout << endl << endl;
@@ -97,14 +101,10 @@ int main()
 	cout << "\n Are both the ticket numbers same?: " << std::to_string(arr[0].GetNumber() == arr[1].GetNumber()) << std::endl;
 
 	WorkTicket anotherDate;
-	
 
-	cout << "\n Enter another ticket date: " ;
-	
+	cout << "\n Enter another ticket date: ";
 	cin >> anotherDate;
-	
-	
-		
+
 	
 	return 0;
 } //end of main function.

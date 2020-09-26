@@ -25,6 +25,18 @@ bool WorkTicket::operator==(const WorkTicket& another_number) const
 	return (GetNumber() == another_number.GetNumber());
 }
 
+WorkTicket WorkTicket::operator=(const WorkTicket& other_ticket)
+{
+	SetNumber(other_ticket.GetNumber());
+	/*SetDay(other_ticket.GetDay());
+	SetMonth(other_ticket.GetMonth());
+	SetYear(other_ticket.GetYear());
+	SetID(other_ticket.GetID());
+	SetDescription(other_ticket.GetDescription());*/
+
+	return *this;
+}
+
 // Defining SetWorkTicket function with its parameters and if all are valid then return true.
 bool WorkTicket::SetWorkTicket(int ticketNumber, int ticketDay, int ticketMonth, int ticketYear, std::string clientID, std::string issueDescrip)
 {
@@ -157,9 +169,18 @@ std::string WorkTicket::ShowWorkTicket() const
 
 }
 
+std::string WorkTicket::output() const
+{
+	std::stringstream result;
+
+	result << "(" << myticketNumber << ")";
+
+	return result.str();
+}
+
 std::ostream& operator<<(std::ostream& out, const WorkTicket& ticket)
 {
-	out << ticket.ShowWorkTicket();
+	out << ticket.output();
 	return out;
 }
 

@@ -29,6 +29,8 @@ public:
 
 	/* Operator overloads */
 	bool operator==(const WorkTicket & another_number) const;
+	WorkTicket operator=(const WorkTicket& other_ticket);
+	
 
 	/* Friend overloads */
 	friend std::ostream& operator<<(std::ostream& out, const WorkTicket& ticket);
@@ -44,6 +46,7 @@ public:
 	std::string GetID() const;
 	std::string GetDescription() const;
 	std::string ShowWorkTicket() const;
+	std::string output() const;
 
 
 
